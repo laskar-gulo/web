@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistem Rental Mobil | Penjamin Kualitas Perangkat Lunak</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --hijau: #10b981;
+    --toska: #0ea5e9;
+    --putih: #f9fafb;
+    --teks: #1e293b;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(180deg, var(--putih) 0%, #e0f2fe 100%);
+    margin: 0;
+    color: var(--teks);
+  }
+
+  header {
+    background: linear-gradient(90deg, var(--toska), var(--hijau));
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.2);
+  }
+
+  header h1 {
+    font-size: 2.3rem;
+    margin: 0;
+  }
+
+  header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+
+  /* ==== BIO ==== */
+  .bio-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: white;
+    max-width: 950px;
+    margin: 50px auto;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .bio-logo img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--hijau);
+    box-shadow: 0 0 25px rgba(16,185,129,0.4);
+  }
+
+  .bio-info {
+    flex: 2;
+    padding: 10px 20px;
+  }
+
+  .bio-info td:first-child {
+    font-weight: 600;
+    color: var(--hijau);
+    width: 160px;
+  }
+
+  .univ {
+    text-align: center;
+    margin: 15px auto 40px;
+    font-weight: 500;
+  }
+
+  /* ==== SLIDESHOW ==== */
+  .slideshow-container {
+    position: relative;
+    max-width: 950px;
+    margin: 40px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+
+  .mySlides {
+    display: none;
+  }
+
+  .mySlides img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+  }
+
+  .caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0.7), transparent);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+
+  .prev:hover, .next:hover {
+    background: rgba(0,0,0,0.7);
+  }
+
+  .prev { left: 10px; }
+  .next { right: 10px; }
+
+  /* ==== TABEL ==== */
+  .content {
+    max-width: 1150px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    margin: 40px auto;
+    padding: 35px;
+  }
+
+  .content h2 {
+    text-align: center;
+    color: var(--toska);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 15px;
+  }
+
+  th, td {
+    border: 1px solid #d1d5db;
+    padding: 12px 10px;
+    vertical-align: top;
+  }
+
+  th {
+    background: linear-gradient(90deg, var(--hijau), var(--toska));
+    color: white;
+    text-align: center;
+  }
+
+  tr:hover td {
+    background: #ecfdf5;
+  }
+
+  footer {
+    background: linear-gradient(90deg, var(--toska), var(--hijau));
+    color: white;
+    text-align: center;
+    padding: 18px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Penjamin Kualitas Perangkat Lunak</h1>
+  <p>Sistem / Website Rental Mobil</p>
+</header>
+
+<section class="bio-card">
+  <div class="bio-logo">
+    <img src="images/logo.png" alt="Logo Kampus">
+  </div>
+  <div class="bio-info">
+    <table>
+      <tr><td>Nama</td><td>: Titien The Lawren Pasaribu</td></tr>
+      <tr><td>NIM</td><td>: 223303030626</td></tr>
+      <tr><td>Kelas</td><td>: 7 Pagi E</td></tr>
+      <tr><td>Dosen</td><td>: Achmad Ridwan, S.T., M.Si</td></tr>
+    </table>
+  </div>
+</section>
+
+<div class="univ">
+  <strong>PROGRAM STUDI TEKNIK INFORMATIKA</strong><br>
+  FAKULTAS SAINS DAN TEKNOLOGI<br>
+  UNIVERSITAS PRIMA INDONESIA<br>
+  <span style="color:#10b981; font-weight:600;">2025</span>
+</div>
+
+<!-- SLIDESHOW -->
+<div class="slideshow-container">
+  <div class="mySlides">
+    <img src="images/foto1.jpg" alt="Home">
+    <div class="caption">Tampilan Home</div>
+  </div>
+  <div class="mySlides">
+    <img src="images/foto2.jpg" alt="Layanan">
+    <div class="caption">Tampilan Layanan</div>
+  </div>
+  <div class="mySlides">
+    <img src="images/foto3.jpg" alt="Pembayaran">
+    <div class="caption">Tampilan Pembayaran</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<div class="content">
+  <h2>Siklus Pengembangan Sistem Rental Mobil</h2>
+  <table>
+    <thead>
+      <tr><th>Siklus</th><th>Aktivitas</th><th>Dokumen</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Perencanaan</strong></td>
+        <td>
+          Mengidentifikasi kebutuhan sistem (tujuan: membuat website rental mobil online).<br>
+          Menentukan fitur: daftar mobil, detail mobil, pemesanan, konfirmasi, pembayaran, testimoni.<br>
+          Menentukan platform: WordPress, PHP–Laravel, atau custom Flutter Web.<br>
+          Menentukan tim pengembang dan pembagian tugas.<br>
+          Menyusun jadwal dan estimasi biaya proyek.
+        </td>
+        <td>
+          System Requirement Specification (SRS)<br>
+          Rencana proyek (Project Plan)<br>
+          Feasibility Study<br>
+          Daftar stakeholder
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Analisis Kebutuhan</strong></td>
+        <td>
+          Menganalisis proses bisnis rental mobil (pemesanan, pengembalian, laporan).<br>
+          Wawancara admin dan pelanggan.<br>
+          Menentukan kebutuhan fungsional & non-fungsional.<br>
+          Membuat diagram konteks dan DFD.
+        </td>
+        <td>
+          Dokumen analisis sistem<br>
+          Use case & DFD<br>
+          Kamus data
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Desain</strong></td>
+        <td>
+          Mendesain struktur database (ERD).<br>
+          Mendesain arsitektur sistem (frontend–backend).<br>
+          Mendesain tampilan halaman: beranda, daftar mobil, detail mobil, pemesanan, pembayaran.<br>
+          Membuat prototype/mockup untuk user interface.<br>
+          Menentukan alur navigasi antarhalaman.
+        </td>
+        <td>
+          Desain database (ERD)<br>
+          Desain sistem (System Design Document)<br>
+          Mockup / Wireframe / Prototype<br>
+          Dokumen arsitektur sistem
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Implementasi / Coding</strong></td>
+        <td>
+          Membuat struktur database sesuai ERD.<br>
+          Mengembangkan modul fitur utama (daftar mobil, pemesanan, pembayaran, laporan).<br>
+          Integrasi front-end dan back-end.<br>
+          Uji coba internal (unit test).
+        </td>
+        <td>
+          Source code<br>
+          Laporan implementasi<br>
+          Hasil unit test
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Testing</strong></td>
+        <td>
+          Melakukan pengujian sistem (System Testing).<br>
+          Melakukan uji coba dengan pengguna (User Acceptance Test / UAT).<br>
+          Memperbaiki bug berdasarkan hasil uji.
+        </td>
+        <td>
+          Rencana Pengujian (Test Plan)<br>
+          Hasil Pengujian (Test Report)<br>
+          Form UAT (User Acceptance Form)
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Deployment</strong></td>
+        <td>
+          Memperbaiki error atau bug pasca implementasi.<br>
+          Melakukan update fitur baru.<br>
+          Backup dan optimasi sistem secara berkala.
+        </td>
+        <td>
+          Laporan Pemeliharaan Sistem<br>
+          Catatan Perubahan (Change Log)<br>
+          Manual Pengguna (User Guide)
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Maintenance</strong></td>
+        <td>
+          Memantau kinerja sistem dan memperbaiki bug/error.<br>
+          Melakukan update fitur sesuai kebutuhan pengguna.<br>
+          Backup dan recovery data secara berkala.<br>
+          Optimalisasi performa server dan database.<br>
+          Memberikan dukungan teknis kepada pengguna.
+        </td>
+        <td>
+          Laporan pemeliharaan sistem<br>
+          Catatan perubahan (Change Log)<br>
+          Dokumentasi update sistem<br>
+          Panduan pengguna (User Manual)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<footer>© 2025 — Titien The Lawren Pasaribu | Universitas Prima Indonesia</footer>
+
+<script>
+let slideIndex = 0;
+showSlides();
+function showSlides() {
+  const slides = document.querySelectorAll(".mySlides");
+  slides.forEach(s => s.style.display = "none");
+  slideIndex++;
+  if (slideIndex > slides.length) slideIndex = 1;
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 4000);
+}
+function plusSlides(n) {
+  slideIndex += n - 1;
+  showSlides();
+}
+</script>
+
+</body>
+</html>
