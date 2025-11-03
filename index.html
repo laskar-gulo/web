@@ -118,26 +118,6 @@
     font-size: 1.1rem;
   }
 
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    padding: 12px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    background: rgba(0,0,0,0.4);
-    border-radius: 50%;
-    transform: translateY(-50%);
-  }
-
-  .prev:hover, .next:hover {
-    background: rgba(0,0,0,0.7);
-  }
-
-  .prev { left: 10px; }
-  .next { right: 10px; }
-
   /* ==== TABEL ==== */
   .content {
     max-width: 1150px;
@@ -230,14 +210,10 @@
     <img src="images/foto3.jpg" alt="Pembayaran">
     <div class="caption">Tampilan Pembayaran</div>
   </div>
-
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
 
 <div class="content">
   <h2>Siklus Pengembangan Sistem Rental Mobil</h2>
-  <!-- tabel siklus tetap sama -->
   <table>
     <thead>
       <tr><th>Siklus</th><th>Aktivitas</th><th>Dokumen</th></tr>
@@ -246,52 +222,104 @@
       <tr>
         <td><strong>Perencanaan</strong></td>
         <td>
-          Mengidentifikasi kebutuhan sistem, menentukan fitur utama seperti daftar mobil, pemesanan, dan pembayaran. 
-          Menetapkan jadwal proyek, anggaran, serta pembagian tugas antar tim pengembang.
+          Mengidentifikasi kebutuhan sistem (tujuan: membuat website rental mobil online).<br>
+          Menentukan fitur: daftar mobil, detail mobil, pemesanan, konfirmasi, pembayaran, testimoni.<br>
+          Menentukan platform: WordPress, PHP–Laravel, atau custom Flutter Web.<br>
+          Menentukan tim pengembang dan pembagian tugas.<br>
+          Menyusun jadwal dan estimasi biaya proyek.
         </td>
-        <td>Dokumen Perencanaan Sistem (Project Plan)</td>
+        <td>
+          System Requirement Specification (SRS)<br>
+          Rencana proyek (Project Plan)<br>
+          Feasibility Study<br>
+          Daftar stakeholder
+        </td>
       </tr>
       <tr>
         <td><strong>Analisis Kebutuhan</strong></td>
         <td>
-          Mengumpulkan data dari pengguna dan admin rental mobil, mendefinisikan kebutuhan fungsional dan non-fungsional.
+          Menganalisis proses bisnis rental mobil (pemesanan, pengembalian, laporan).<br>
+          Wawancara admin dan pelanggan.<br>
+          Menentukan kebutuhan fungsional & non-fungsional.<br>
+          Membuat diagram konteks dan DFD.
         </td>
-        <td>Dokumen Analisis Kebutuhan (SRS)</td>
+        <td>
+          Dokumen analisis sistem<br>
+          Use case & DFD<br>
+          Kamus data
+        </td>
       </tr>
       <tr>
         <td><strong>Desain</strong></td>
         <td>
-          Mendesain database, struktur sistem, serta tampilan antarmuka (UI) setiap halaman website.
+          Mendesain struktur database (ERD).<br>
+          Mendesain arsitektur sistem (frontend–backend).<br>
+          Mendesain tampilan halaman: beranda, daftar mobil, detail mobil, pemesanan, pembayaran.<br>
+          Membuat prototype/mockup untuk user interface.<br>
+          Menentukan alur navigasi antarhalaman.
         </td>
-        <td>Dokumen Desain Sistem (System Design Document)</td>
+        <td>
+          Desain database (ERD)<br>
+          Desain sistem (System Design Document)<br>
+          Mockup / Wireframe / Prototype<br>
+          Dokumen arsitektur sistem
+        </td>
       </tr>
       <tr>
-        <td><strong>Implementasi</strong></td>
+        <td><strong>Implementasi / Coding</strong></td>
         <td>
-          Mengembangkan website sesuai desain menggunakan HTML, CSS, PHP, dan database MySQL.
+          Membuat struktur database sesuai ERD.<br>
+          Mengembangkan modul fitur utama (daftar mobil, pemesanan, pembayaran, laporan).<br>
+          Integrasi front-end dan back-end.<br>
+          Uji coba internal (unit test).
         </td>
-        <td>Source Code dan Dokumentasi Implementasi</td>
+        <td>
+          Source code<br>
+          Laporan implementasi<br>
+          Hasil unit test
+        </td>
       </tr>
       <tr>
         <td><strong>Testing</strong></td>
         <td>
-          Melakukan pengujian terhadap semua fitur, memastikan sistem berjalan sesuai kebutuhan dan bebas error.
+          Melakukan pengujian sistem (System Testing).<br>
+          Melakukan uji coba dengan pengguna (User Acceptance Test / UAT).<br>
+          Memperbaiki bug berdasarkan hasil uji.
         </td>
-        <td>Laporan Hasil Uji (Testing Report)</td>
+        <td>
+          Rencana Pengujian (Test Plan)<br>
+          Hasil Pengujian (Test Report)<br>
+          Form UAT (User Acceptance Form)
+        </td>
       </tr>
       <tr>
         <td><strong>Deployment</strong></td>
         <td>
-          Mengunggah website ke server hosting, memastikan website dapat diakses publik.
+          Memperbaiki error atau bug pasca implementasi.<br>
+          Melakukan update fitur baru.<br>
+          Backup dan optimasi sistem secara berkala.
         </td>
-        <td>Dokumen Rilis Sistem (Deployment Report)</td>
+        <td>
+          Laporan Pemeliharaan Sistem<br>
+          Catatan Perubahan (Change Log)<br>
+          Manual Pengguna (User Guide)
+        </td>
       </tr>
       <tr>
         <td><strong>Maintenance</strong></td>
         <td>
-          Melakukan pembaruan fitur, perbaikan bug, dan peningkatan performa website secara berkala.
+          Memantau kinerja sistem dan memperbaiki bug/error.<br>
+          Melakukan update fitur sesuai kebutuhan pengguna.<br>
+          Backup dan recovery data secara berkala.<br>
+          Optimalisasi performa server dan database.<br>
+          Memberikan dukungan teknis kepada pengguna.
         </td>
-        <td>Laporan Pemeliharaan (Maintenance Report)</td>
+        <td>
+          Laporan pemeliharaan sistem<br>
+          Catatan perubahan (Change Log)<br>
+          Dokumentasi update sistem<br>
+          Panduan pengguna (User Manual)
+        </td>
       </tr>
     </tbody>
   </table>
@@ -311,10 +339,6 @@ function showSlides() {
   if (slideIndex > slides.length) slideIndex = 1;
   slides[slideIndex-1].style.display = "block";
   setTimeout(showSlides, 4000);
-}
-function plusSlides(n) {
-  slideIndex += n - 1;
-  showSlides();
 }
 </script>
 
