@@ -72,6 +72,17 @@
     width: 160px;
   }
 
+  .bio-info a {
+    color: var(--toska);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .bio-info a:hover {
+    color: var(--hijau);
+    text-decoration: underline;
+  }
+
   .univ {
     text-align: center;
     margin: 15px auto 40px;
@@ -88,10 +99,7 @@
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   }
 
-  .mySlides {
-    display: none;
-  }
-
+  .mySlides { display: none; }
   .mySlides img {
     width: 100%;
     height: 420px;
@@ -193,6 +201,10 @@
       <tr><td>NIM</td><td>: 223303030626</td></tr>
       <tr><td>Kelas</td><td>: 7 Pagi E</td></tr>
       <tr><td>Dosen</td><td>: Achmad Ridwan, S.T., M.Si</td></tr>
+      <tr>
+        <td>Halaman Web</td>
+        <td>: <a href="https://docar.co.id/sewa-mobil-jakarta" target="_blank">https://docar.co.id/sewa-mobil-jakarta</a></td>
+      </tr>
     </table>
   </div>
 </section>
@@ -225,6 +237,7 @@
 
 <div class="content">
   <h2>Siklus Pengembangan Sistem Rental Mobil</h2>
+  <!-- tabel siklus tetap sama -->
   <table>
     <thead>
       <tr><th>Siklus</th><th>Aktivitas</th><th>Dokumen</th></tr>
@@ -233,110 +246,60 @@
       <tr>
         <td><strong>Perencanaan</strong></td>
         <td>
-          Mengidentifikasi kebutuhan sistem (tujuan: membuat website rental mobil online).<br>
-          Menentukan fitur: daftar mobil, detail mobil, pemesanan, konfirmasi, pembayaran, testimoni.<br>
-          Menentukan platform: WordPress, PHP–Laravel, atau custom Flutter Web.<br>
-          Menentukan tim pengembang dan pembagian tugas.<br>
-          Menyusun jadwal dan estimasi biaya proyek.
+          Mengidentifikasi kebutuhan sistem, menentukan fitur utama seperti daftar mobil, pemesanan, dan pembayaran. 
+          Menetapkan jadwal proyek, anggaran, serta pembagian tugas antar tim pengembang.
         </td>
-        <td>
-          System Requirement Specification (SRS)<br>
-          Rencana proyek (Project Plan)<br>
-          Feasibility Study<br>
-          Daftar stakeholder
-        </td>
+        <td>Dokumen Perencanaan Sistem (Project Plan)</td>
       </tr>
       <tr>
         <td><strong>Analisis Kebutuhan</strong></td>
         <td>
-          Menganalisis proses bisnis rental mobil (pemesanan, pengembalian, laporan).<br>
-          Wawancara admin dan pelanggan.<br>
-          Menentukan kebutuhan fungsional & non-fungsional.<br>
-          Membuat diagram konteks dan DFD.
+          Mengumpulkan data dari pengguna dan admin rental mobil, mendefinisikan kebutuhan fungsional dan non-fungsional.
         </td>
-        <td>
-          Dokumen analisis sistem<br>
-          Use case & DFD<br>
-          Kamus data
-        </td>
+        <td>Dokumen Analisis Kebutuhan (SRS)</td>
       </tr>
       <tr>
         <td><strong>Desain</strong></td>
         <td>
-          Mendesain struktur database (ERD).<br>
-          Mendesain arsitektur sistem (frontend–backend).<br>
-          Mendesain tampilan halaman: beranda, daftar mobil, detail mobil, pemesanan, pembayaran.<br>
-          Membuat prototype/mockup untuk user interface.<br>
-          Menentukan alur navigasi antarhalaman.
+          Mendesain database, struktur sistem, serta tampilan antarmuka (UI) setiap halaman website.
         </td>
-        <td>
-          Desain database (ERD)<br>
-          Desain sistem (System Design Document)<br>
-          Mockup / Wireframe / Prototype<br>
-          Dokumen arsitektur sistem
-        </td>
+        <td>Dokumen Desain Sistem (System Design Document)</td>
       </tr>
       <tr>
-        <td><strong>Implementasi / Coding</strong></td>
+        <td><strong>Implementasi</strong></td>
         <td>
-          Membuat struktur database sesuai ERD.<br>
-          Mengembangkan modul fitur utama (daftar mobil, pemesanan, pembayaran, laporan).<br>
-          Integrasi front-end dan back-end.<br>
-          Uji coba internal (unit test).
+          Mengembangkan website sesuai desain menggunakan HTML, CSS, PHP, dan database MySQL.
         </td>
-        <td>
-          Source code<br>
-          Laporan implementasi<br>
-          Hasil unit test
-        </td>
+        <td>Source Code dan Dokumentasi Implementasi</td>
       </tr>
       <tr>
         <td><strong>Testing</strong></td>
         <td>
-          Melakukan pengujian sistem (System Testing).<br>
-          Melakukan uji coba dengan pengguna (User Acceptance Test / UAT).<br>
-          Memperbaiki bug berdasarkan hasil uji.
+          Melakukan pengujian terhadap semua fitur, memastikan sistem berjalan sesuai kebutuhan dan bebas error.
         </td>
-        <td>
-          Rencana Pengujian (Test Plan)<br>
-          Hasil Pengujian (Test Report)<br>
-          Form UAT (User Acceptance Form)
-        </td>
+        <td>Laporan Hasil Uji (Testing Report)</td>
       </tr>
       <tr>
         <td><strong>Deployment</strong></td>
         <td>
-          Memperbaiki error atau bug pasca implementasi.<br>
-          Melakukan update fitur baru.<br>
-          Backup dan optimasi sistem secara berkala.
+          Mengunggah website ke server hosting, memastikan website dapat diakses publik.
         </td>
-        <td>
-          Laporan Pemeliharaan Sistem<br>
-          Catatan Perubahan (Change Log)<br>
-          Manual Pengguna (User Guide)
-        </td>
+        <td>Dokumen Rilis Sistem (Deployment Report)</td>
       </tr>
       <tr>
         <td><strong>Maintenance</strong></td>
         <td>
-          Memantau kinerja sistem dan memperbaiki bug/error.<br>
-          Melakukan update fitur sesuai kebutuhan pengguna.<br>
-          Backup dan recovery data secara berkala.<br>
-          Optimalisasi performa server dan database.<br>
-          Memberikan dukungan teknis kepada pengguna.
+          Melakukan pembaruan fitur, perbaikan bug, dan peningkatan performa website secara berkala.
         </td>
-        <td>
-          Laporan pemeliharaan sistem<br>
-          Catatan perubahan (Change Log)<br>
-          Dokumentasi update sistem<br>
-          Panduan pengguna (User Manual)
-        </td>
+        <td>Laporan Pemeliharaan (Maintenance Report)</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-<footer>© 2025 — Titien The Lawren Pasaribu | Universitas Prima Indonesia</footer>
+<footer>
+  © 2025 — Titien The Lawren Pasaribu | Universitas Prima Indonesia
+</footer>
 
 <script>
 let slideIndex = 0;
